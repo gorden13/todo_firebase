@@ -1,0 +1,28 @@
+.todo-base {
+  margin: 0;
+  padding: 20px;
+  background: #abcfee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    width: 100%;
+    max-width: 600px;
+    background-color: #FFF;
+  }
+
+  .splitter {
+    height: 20px;
+    background: none;
+  }
+
+  .loading-modal {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

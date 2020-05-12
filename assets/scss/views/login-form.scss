@@ -1,0 +1,11 @@
+.auth-form {
+  height: 100vh;
+  @extend %dfc;
+
+  button {
+    width: 100%;
+    img {
+      width: 25px;
+    }
+  }
+}

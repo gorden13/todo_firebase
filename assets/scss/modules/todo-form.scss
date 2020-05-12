@@ -1,0 +1,26 @@
+.todo-form {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  justify-content: space-between;
+
+  .text {
+    display: block;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .input {
+    max-width: 300px;
+  }
+  .submit-btn {
+    border: none;
+    outline: none;
+    width: 37px;
+    height: 37px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .submit-btn:hover {
+    transform: scale(1.1);
+  }
+}
