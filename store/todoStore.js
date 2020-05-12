@@ -16,11 +16,6 @@ export const mutations = {
   setTodos (state, list) {
     state.todos = list
   },
-  setNoteTitle (state, title) {
-    state.note.title = title
-    // изменили название заметки -> изменения есть
-    state.isNoteChange = true
-  },
   updateIsChangeNote (state, value) {
     state.isNoteChange = value
   },
@@ -49,7 +44,6 @@ export const mutations = {
 
 export const actions = {
   async fetchAllTodos ({ dispatch, commit }) {
-    // commit('setProcessing', true)
     const collectionRef = fireDb.collection('todos')
     try {
       const todos = []
@@ -61,15 +55,12 @@ export const actions = {
           id: doc.id
         })
       })
-      // commit('setProcessing', false)
       commit('setTodos', todos)
     } catch (error) {
-      // commit('setProcessing', false)
       this.$toast.error(error)
     }
   },
   async create ({ commit }, title) {
-    // commit('setProcessing', false)
     try {
       const addRef = await fireDb.collection(collectionName).add({
         title,
@@ -79,10 +70,8 @@ export const actions = {
         id: addRef.id,
         title
       })
-      // commit('setProcessing', false)
       this.$toast.show('Новый таск был успешно создан')
     } catch (error) {
-      // commit('setProcessing', false)
       this.$toast.error(error)
     }
   },

@@ -13,6 +13,10 @@
       display: block;
       font-weight: 300;
       letter-spacing: 1px;
+      max-width: 500px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       &.deleted {
         text-decoration: line-through;
       }

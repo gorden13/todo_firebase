@@ -21,16 +21,8 @@ export const actions = {
   },
 
   signInWithGoogle ({ commit }) {
-    // commit('setProcessing', true)
-
-    // auth.signInWithRedirect(GoogleProvider).then((res) => {
-    //   console.log(rs);
-    // }).catch()
-
     return new Promise((resolve, reject) => {
       auth.signInWithRedirect(GoogleProvider)
-      // commit('setProcessing', false)
-      // setTimeout(() => {
       resolve()
     })
   },
@@ -40,9 +32,7 @@ export const actions = {
   },
 
   signOut ({ commit }) {
-    // commit('setProcessing', true)
     auth.signOut().then(() => {
-      // commit('setProcessing', false)
       commit('setUser', '')
     }).catch(err => (err))
   }

@@ -3,47 +3,32 @@
     <todo-form />
     <div class="splitter" />
     <todo-list />
-    <!-- <div v-for="item in items" :key="item.id">
-      {{ item.title }}
-    </div> -->
-    <div v-if="processing" class="loading-modal">
+    <!-- <div v-if="processing" class="loading-modal">
       <loading />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import todoList from '@/components/modules/TodoList'
 import todoForm from '@/components/modules/TodoForm'
-import loading from '@/components/elements/Loading'
-// import { db } from '@/plugins/fireinit.js'
+// import loading from '@/components/elements/Loading'
 
 export default {
-  // middleware: 'router-auth',
+  middleware: 'router-auth',
   components: {
     todoList,
-    todoForm,
-    loading
+    todoForm
+    // loading
   },
-  // asyncData ({ store }) {
-  //   return {
-  //     itemsRef: db.ref('todos')
-  //   }
-  // },
   data: () => ({
     unfold: -1,
     items: []
   }),
-  computed: {
-    processing () {
-      return this.$store.state.auth.processing
-    }
-  },
-  // created () {
-  //   const vm = this
-  //   vm.itemsRef.on('value', function (snapshot) {
-  //     vm.items = snapshot.val()
-  //   })
+  // computed: {
+  //   processing () {
+  //     return this.$store.state.auth.processing
+  //   }
   // },
   methods: {
     toggleFold (i) {

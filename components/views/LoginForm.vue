@@ -25,7 +25,6 @@
 
 <script>
 import { mapActions } from 'vuex'
-// import { auth, GoogleProvider } from '@/plugins/fireinit'
 export default {
   middleware: 'quest',
   data: () => ({
@@ -42,21 +41,10 @@ export default {
     }),
     googleSignUp () {
       this.signInWithGoogle().then(() => {
-        // setTimeout(() => {
-        // this.$toast.show('Авторизация')
-        // location.reload()
-        // setTimeout(() => {
         this.$router.push('/')
-        // }, 2000)
-        // }, 300)
       }).catch((e) => {
         this.$toast.error(e)
       })
-      // auth.signInWithRedirect(GoogleProvider).then((result) => {
-      //   this.$router.replace('/')
-      // }).catch((err) => {
-      //   this.$toast.error(err.message)
-      // })
     }
   }
 }

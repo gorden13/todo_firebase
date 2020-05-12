@@ -13,15 +13,11 @@ const config = {
   appId: '1:841981244827:web:e7c3198699c458709f1d3e'
 }
 
-// let app = null
 if (!firebase.apps.length) {
   firebase.initializeApp(config)
 }
-// !firebase.apps.length ? firebase.initializeApp(config) : ''
 export const GoogleProvider = new firebase.auth.GoogleAuthProvider()
 export const auth = firebase.auth()
 export const fireDb = firebase.firestore()
 export const db = firebase.database()
-// export const todosRef = fireDb.ref('todos')
-// export const StoreDB = firebase.firestore()
 export default firebase

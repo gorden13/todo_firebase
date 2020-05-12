@@ -44,7 +44,6 @@ export default {
     vm.itemsRef.on('value', function (snapshot) {
       vm.todos = snapshot.val()
     })
-    // await this.fetchAll()
   },
   methods: {
     ...mapActions({
