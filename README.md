@@ -19,4 +19,4 @@ $ npm run start
 $ npm run generate
 ```
 
-demo: https://todos-cd400.web.app/
+demo: https://todos-cd400.firebaseapp.com/
